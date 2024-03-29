@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Science Learning Platform - Lesson Four</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Agricultural Science Learning Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/modules">Modules</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2>Lesson Four:Methods of Replenishing lost nutrients (Crop Rotation)</h2>
+  <form action="/lesson4" method="post">
+
+    <p><b>Concept of Crop Rotations:</b>The planting of different types of crops on the same pieces of land in a definite sequence. <br>
+
+Examples of Crop Rotation System 
+	Plot 1	Plot 2	Plot 3	Plot 4
+Year 1 	Yam 	Cowpea	Cassava 	Maize
+Year 2	Cowpea 	Cassava 	Maize	Yam 
+Year 3	Cassava 	Maize	Yam 	Cowpea
+Year 4	Maize	Yam	Cowpea	Cassava
+
+The land is divided into section, usually between 3 and 6, in each year, different plants are planted. <br>
+<b>Compatibility Check </b><br>      
+1.Deep rooted plants (cassava and yam) should not follow each other <br>
+2.Shallow root (rice and maize) should not follow each other <br>
+3.Crop with common diseases should not follow each other <br>
+4.Crop with the same pest should not follow each other  <br>
+5.Crop of the same family should not follow each other <br>
+6.Inclusion of legume crop in the rotation add nutrient to the soil <br>  
+</p>
+    
+    <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
+    <button class="btn btn-primary">Play Audio</button>
+  </form> 
+</div>
+
+<script>
+//   document.getElementById('playButton').addEventListener('click', function() {
+//     fetch('/text_to_speech', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ text }),
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         console.log('Text read aloud successfully.');
+//       } else {
+//         console.error('Error reading text aloud.');
+//       }
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+//   });
+
+document.getElementById('playButton').addEventListener('click', function(){
+    window .location = '/text-2-speech'
+})
+</script>
+
+</body>
+</html>

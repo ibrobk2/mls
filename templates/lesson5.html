@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Science Learning Platform - Lesson Five</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Agricultural Science Learning Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/modules">Modules</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2>Lesson Five: Methods of Replenishing lost nutrients (Bush Fallowing)</h2>
+  <form action="/lesson5" method="post">
+    
+    <p><b>Concept of Bush Fallow:</b> Bush fallowing is a practice where farmlands are left to fallow after one year or two years of cultivation. The purpose of this is to allow nutrients to revert to the soil. <br>
+        <b>Advantage of bush fallowing as a method of replenishing loss nutrients</b>  <br>
+        1.Fallow checks erosion <br> 
+        2.Land becomes relatively cheap to replenish with lost nutrients as farmers may not need fertilizers  <br>  
+        3.Plant diseases lost their host and die <br>
+        4.Pest are dislodged from farm land due to the absent of their host during fallow years <br>
+        5.Fallow improve soil physical properties such as texture, structure  <br>
+        </p>
+    
+    <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
+    <button class="btn btn-primary">Play Audio</button>
+  </form> 
+</div>
+
+<script>
+//   document.getElementById('playButton').addEventListener('click', function() {
+//     fetch('/text_to_speech', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ text }),
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         console.log('Text read aloud successfully.');
+//       } else {
+//         console.error('Error reading text aloud.');
+//       }
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+//   });
+
+document.getElementById('playButton').addEventListener('click', function(){
+    window .location = '/text-2-speech'
+})
+</script>
+
+</body>
+</html>

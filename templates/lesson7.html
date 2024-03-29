@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Science Learning Platform - Lesson Seven</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Agricultural Science Learning Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/modules">Modules</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2>Lesson Seven: Nutrient Cycle (Nitrogen)</h2>
+  <form action="/lesson7" method="post">
+    
+    <p><b>Concept of Nutrient Cycle:</b> The cyclical process by which certain nutrients like nitrogen, carbon and water are added to the soil and taken back into the atmosphere.  <br>
+        <b>Nitrogen Cycle</b> <br>
+        Nitrogen cycle is a process by which nitrogen is naturally added to and removed from the soil. Nitrogen cycle is nature’s ways of regulating the amount of nitrogen. Nitrogen fixation process involve soil organisms which add a reasonable amount of nitrogen to the soil <br>
+        <b>Ways by which Nitrogen is added to the soil in the nitrogen cycle.</b> <br>     
+        1.Direct fixation by lightening during rainfall (Electrical Discharge)  <br>  
+        2.Incorporation by free living bacterial or non-symbiotic bacteria <br>
+        3.Nitrogen fixing bacteria in the root nodules  <br>
+        4.Decomposition of organic matters <br>
+        5.Application of nitrogen fertilizer <br>
+        6.Ammonification <br>
+        7.Nitrification <br>   
+        
+        <b>Ways by which soil Nitrogen is lost from the soil</b> <br>   
+        1.By denitrification <br> 
+        2.Soil erosion <br>
+        3.Leaching <br> 
+        4.Soil pH <br>
+        5.Bush Burning  <br>
+        6.Crop removal  <br>
+        7.Volatilization  <br>
+        8.Oxidation reaction  <br>
+        9.Reduction reaction  <br>
+        </p>
+    
+    <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
+    <button class="btn btn-primary">Play Audio</button>
+  </form> 
+</div>
+
+<script>
+//   document.getElementById('playButton').addEventListener('click', function() {
+//     fetch('/text_to_speech', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ text }),
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         console.log('Text read aloud successfully.');
+//       } else {
+//         console.error('Error reading text aloud.');
+//       }
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+//   });
+
+document.getElementById('playButton').addEventListener('click', function(){
+    window .location = '/text-2-speech'
+})
+</script>
+
+</body>
+</html>

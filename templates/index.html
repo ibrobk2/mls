@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultural Science Learning Platform</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .jumbotron {
+      background-color: #f8f9fa;
+    }
+
+    /* Styles for the sentence */
+.sentence {
+  /* font-size: 18px; */
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out; /* Transition effect */
+}
+
+img.slider{
+    width: 450px;
+    height: 450px;
+}
+
+/* Styles for the verb and noun */
+#verb{
+  transition: all 0.5s ease-in-out; /* Transition effect */
+  color:red;
+ 
+  animation: typing-animation 3s steps(40, end);
+}
+
+/* Animation for typing effect */
+@keyframes typing-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <img src="{{url_for('static', filename='abu.png')}}" alt="" width="50px">
+    <a class="navbar-brand" href="#" style="color:green;font-weight:bold;">Agricultural Science Learning Platform</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <!-- <a class="nav-link" href="calculator.php">Tax Calculator</a> -->
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link" href="invoice.php">Invoice/Payment</a> -->
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="invoice.php">Make Payment</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Status</a>
+        </li> -->
+        <!-- <li class="nav-item"> -->
+          <!-- <a class="nav-link" href="reprint.php">Print Receipt</a> -->
+        <!-- </li> -->
+
+          <!-- <div class="nav-item">
+           <a href="./dash" class="nav-link"><i class="ik ik-grid"></i><span>Dashboard</span></a>
+          </div> -->
+          <li class="nav-item">
+          <a class="nav-link" href="logout.php">Home</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/modules">Modules</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a class="nav-link" href="register.php"></a> -->
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 slider" src="{{url_for('static', filename='slide.jpeg')}}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 slider" src="{{url_for('static', filename='slide22.jpeg')}}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 slider" src="{{url_for('static', filename='slide12.jpeg')}}" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{url_for('static', filename='slide22.jpeg')}}" alt="Fourth slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Jumbotron -->
+<div class="jumbotron text-center">
+  <h1 class="display-4 sentence"><span id="verb">Learn</span> Agric. Science</h1>
+  <p class="lead">This platform provides interactive learning materials for various aspects of agricultural science.</p>
+  <hr class="my-4">
+  <!-- <p>Log in or register to access advanced features and personalized services.</p> -->
+  <a class="btn btn-primary btn-lg" href="/" role="button">Home</a>
+  <a class="btn btn-warning btn-lg" href="/modules" role="button">Modules</a>
+  <a class="btn btn-success btn-lg" href="/modules" role="button">Take Class</a>
+</div>
+
+<!-- Tax Calculator Section -->
+<!--  -->
+
+<!-- Footer -->
+<footer class="footer mt-auto py-3 bg-light text-center">
+  <div class="container">
+    <span class="text-muted">© 2024 Ahmadu Bello University, Zaria.</span>
+  </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // List of verbs and nouns
+const verbs = ["Learn", "Know", "Experience"];
+
+
+// Function to update words
+function updateWords() {
+  // Randomly select words
+  const verb = verbs[Math.floor(Math.random() * verbs.length)];
+//   const noun = nouns[Math.floor(Math.random() * nouns.length)];
+
+  // Update the content of spans with new words
+  document.getElementById("verb").textContent = verb;
+//   document.getElementById("noun").textContent = noun;
+}
+
+// Initial call to update words when the page loads
+updateWords();
+
+// Automatically update words every 3 seconds
+setInterval(updateWords, 1500);
+
+
+
+</script>
+</body>
+
+</html>

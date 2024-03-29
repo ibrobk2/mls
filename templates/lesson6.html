@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Science Learning Platform - Lesson Six</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Agricultural Science Learning Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/modules">Modules</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2>Lesson Six: Methods of Replenishing lost nutrients (cover crop)</h2>
+  <form action="/lesson6" method="post">
+    
+    <p>Concept of cover cropping: Cover cropping is a process of planting certain plants mainly to cover soil surface. By so doing, the nutrients are conserved in the soil.<br>
+       <b>Commonly use cover crop</b> <br>   
+        1.Macuna utilis,  <br>
+        2.Pueraria phaseoloides <br>
+        3.Centrosema <br>
+        4.Pubescens <br>
+        5.Crotalaria juncea. <br> 
+        They are all leguminous crop. <br> 
+        
+        <b>Advantage of cover cropping as a method of replenishing loss nutrients</b> <br>
+        1.It reduces erosive capacity of moving water, thus checking erosion <br>
+        2.It adds organic matter to the soil when dead <br> 
+        3.Leguminous cover crops increase the nitrogen levels of the soil through the root bacteria in in the root nodules <br>   
+        4.It influences soil water supply <br>
+        5.Cover crop suppress weeds <br>
+        6.It protects the surface of the soil from direct heat of the sun <br>
+        
+      </p>
+    
+    <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
+    <button class="btn btn-primary">Play Audio</button>
+  </form> 
+</div>
+
+<script>
+//   document.getElementById('playButton').addEventListener('click', function() {
+//     fetch('/text_to_speech', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ text }),
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         console.log('Text read aloud successfully.');
+//       } else {
+//         console.error('Error reading text aloud.');
+//       }
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+//   });
+
+document.getElementById('playButton').addEventListener('click', function(){
+    window .location = '/text-2-speech'
+})
+</script>
+
+</body>
+</html>

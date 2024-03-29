@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Science Learning Platform - Lesson Eight</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Agricultural Science Learning Platform</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/modules">Modules</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h2>Lesson Eight: Nutrient Cycle (Carbon)</h2>
+  <form action="/lesson8" method="post">
+    
+    <p><b>Concept of Carbon Cycle:</b>This involve the series of processes which contribute to the circulation of carbon in nature. <br>
+        Ways by which carbon is added to and remove from the soil.<br>
+        1.Carbon dioxide is removed from the air mainly by photosynthesis during which green plants make use of carbon (iv) oxide and water to manufacture their food using the energy derived from the sun. <br>
+        2.Carbon is lost in the form of carbonates of calcium and magnesium through leaching and drainage  <br> 
+        3.Atmosphere gain carbon through: <br><br>
+        a.Burning fuel like coal and wood <br>
+        b.The action of volcano which carbon dioxide <br>
+        c.Respiration by plants and animals <br>
+        d.The death, decay and putrefaction of plants and animal <br>    
+        e.Diffusion of carbon dioxide from seas and other body of water, acting as reservoir of carbon dioxide <br><br>
+        <b>Importance of Carbon Cycle</b> <br>
+        1.Plants use carbon dioxide from the air to manufacture their food during photosynthesis <br>
+        2.It provides carbon which is the major building block of all organic matters <br>
+        3.It Helps to purify the atmosphere and also to maintain the atmospheric levels of carbon dioxide  <br>    
+        4.Organic matter which is made from carbon helps to replenish nutrients  <br>
+        </p>
+    
+    <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
+    <button class="btn btn-primary">Play Audio</button>
+  </form> 
+</div>
+
+<script>
+//   document.getElementById('playButton').addEventListener('click', function() {
+//     fetch('/text_to_speech', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ text }),
+//     })
+//     .then(response => {
+//       if (response.ok) {
+//         console.log('Text read aloud successfully.');
+//       } else {
+//         console.error('Error reading text aloud.');
+//       }
+//     })
+//     .catch(error => {
+//       console.error('Error:', error);
+//     });
+//   });
+
+document.getElementById('playButton').addEventListener('click', function(){
+    window .location = '/text-2-speech'
+})
+</script>
+
+</body>
+</html>

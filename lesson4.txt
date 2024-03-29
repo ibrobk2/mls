@@ -1,0 +1,19 @@
+Lesson Four: Methods of Replenishing lost nutrients (Crop Rotation)
+
+Concept of Crop Rotations: The planting of different types of crops on the same pieces of land in a definite sequence.
+
+Examples of Crop Rotation System 
+	Plot 1	Plot 2	Plot 3	Plot 4
+Year 1 	Yam 	Cowpea	Cassava 	Maize
+Year 2	Cowpea 	Cassava 	Maize	Yam 
+Year 3	Cassava 	Maize	Yam 	Cowpea
+Year 4	Maize	Yam	Cowpea	Cassava
+
+The land is divided into section, usually between 3 and 6, in each year, different plants are planted. 
+Compatibility Check      
+1.	Deep rooted plants (cassava and yam) should not follow each other
+2.	Shallow root (rice and maize) should not follow each other
+3.	Crop with common diseases should not follow each other
+4.	Crop with the same pest should not follow each other 
+5.	Crop of the same family should not follow each other
+6.	Inclusion of legume crop in the rotation add nutrient to the soil  
