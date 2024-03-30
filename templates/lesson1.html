@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultural Science Learning Platform - Lesson One</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body>
 
@@ -45,6 +50,18 @@
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
   </form> 
+
+  <hr>
+  <h3>Exercises:</h3>
+  <div class="container mt-5">
+    <!-- <h3>CBT App - Nutrient and Nutrient Cycle</h3> -->
+    <div id="questions">
+      <!-- Questions will be dynamically added here -->
+    </div>
+    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <div id="result"></div>
+  </div>
+<!-- *** -->
 </div>
 
 <script>
@@ -72,6 +89,69 @@ document.getElementById('playButton').addEventListener('click', function(){
     window .location = '/text-2-speech'
 })
 </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Sample questions
+    var questions = [
+      {
+        question: "What is the process by which plants absorb nutrients from the soil?",
+        options: ["Photosynthesis", "Transpiration", "Absorption", "Respiration"],
+        answer: "Absorption"
+      },
+      {
+        question: "Which nutrient is essential for the growth of plants?",
+        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
+        answer: "Nitrogen"
+      },
+      {
+        question: "What is the primary source of nitrogen for plants?",
+        options: ["Atmosphere", "Soil", "Water", "Sunlight"],
+        answer: "Atmosphere"
+      }
+    ];
+  
+    // Dynamically generate HTML for questions
+    questions.forEach(function(q, index) {
+      var questionHtml = `<div class="question mb-3">
+                            <h4>${index + 1}. ${q.question}</h4>
+                            <div class="options">`;
+      
+      q.options.forEach(function(option) {
+        questionHtml += `<div class="form-check">
+                          <input class="form-check-input" type="radio" name="q${index}" value="${option}">
+                          <label class="form-check-label">${option}</label>
+                        </div>`;
+      });
+  
+      questionHtml += `</div></div>`;
+      $('#questions').append(questionHtml);
+    });
+  
+    // Handle submission of answers
+    $('#submitBtn').click(function() {
+      var correctCount = 0;
+  
+      $('.question').each(function(index) {
+        var selectedOption = $(this).find('input[type=radio]:checked').val();
+        var correctAnswer = questions[index].answer;
+  
+        if (selectedOption === correctAnswer) {
+          $(this).addClass('correct');
+          correctCount++;
+        } else {
+          $(this).addClass('incorrect');
+          $(this).find(`input[value="${correctAnswer}"]`).next('label').addClass('correct-answer');
+        }
+      });
+
+      // var resultHtml = `<p>You got ${correctCount} out of ${questions.length} questions correct.</p>`;
+      // $('#result').html(resultHtml);
+    });
+  });
+  // toastr.info('Are you the 6 fingered man?');
+</script>
+
 
 </body>
 </html>
