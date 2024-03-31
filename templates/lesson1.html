@@ -32,6 +32,7 @@
 
 <div class="container mt-5">
   <h2>Lesson One: Macro-Nutrients And Micro-Nutrients</h2>
+  <img src="{{url_for('static', filename='slide.jpeg')}}" alt="">
   <form action="/lesson1" method="post">
     <p name="text">Plant nutrients are essential intake by the plant for proper growth. Plant require nutrients to survive. These nutrients or elements are obtainable from the soil. Plant nutrients are categorized into macro and micro nutrients. 
         <br> <b>Macro Nutrient:</b>
@@ -95,20 +96,30 @@ document.getElementById('playButton').addEventListener('click', function(){
     // Sample questions
     var questions = [
       {
-        question: "What is the process by which plants absorb nutrients from the soil?",
-        options: ["Photosynthesis", "Transpiration", "Absorption", "Respiration"],
-        answer: "Absorption"
+        question: "Which of the following is not among the category of Plant nutrient?",
+        options: ["Micro Nutrient", "Macro Nutrient", "Soil Nutrient"],
+        answer: "Soil Nutrient"
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "Does Plant require nutrients to survive?",
+        options: ["True", "False", "Not Sure"],
+        answer: "True"
       },
       {
-        question: "What is the primary source of nitrogen for plants?",
+        question: "Where do plants usually obtain their nutrients?",
         options: ["Atmosphere", "Soil", "Water", "Sunlight"],
-        answer: "Atmosphere"
-      }
+        answer: "Soil"
+      },
+      {
+        question: "Which of the following is not Macro Nutrient?",
+        options: ["Nitrogen", "Phosphorus", "Potassium", "Zinc"],
+        answer: "Zinc"
+      },
+      {
+        question: "All the followings are Micro Nutrients except?",
+        options: ["molybdenum", "Phosphorus", "Copper", "Zinc"],
+        answer: "Phosphorus"
+      },
     ];
   
     // Dynamically generate HTML for questions
@@ -145,8 +156,8 @@ document.getElementById('playButton').addEventListener('click', function(){
         }
       });
 
-      // var resultHtml = `<p>You got ${correctCount} out of ${questions.length} questions correct.</p>`;
-      // $('#result').html(resultHtml);
+      var resultHtml = `<p>You got ${correctCount} out of ${questions.length} questions correct.</p>`;
+      $('#result').html(resultHtml);
     });
   });
   // toastr.info('Are you the 6 fingered man?');

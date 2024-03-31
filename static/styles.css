@@ -28,4 +28,10 @@
     border: 3px solid;
     border-color: red;
   }
+
+  img{
+    display: block;
+    margin: auto;
+    width: 450px;
+  }
   

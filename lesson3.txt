@@ -1,11 +1,11 @@
-Lesson Three: Factors influencing nutrient availability in the soil
-1.	Soil pH
-2.	Concentration of other nutrients 
-3.	Leaching 
-4.	Crop removal
-5.	Oxidation and reduction of Organic materials
-6.	Burning 
-7.	Soil texture
-8.	Erosion
-9.	Soil moisture contents
-10.	Level of organic matter/microorganisms in the soil     
+Lesson Three: Factors influencing nutrient availability in the soil.
+1. Soil pH .
+2. Concentration of other nutrients. 
+3. Leaching. 
+4. Crop removal.
+5. Oxidation and reduction of Organic materials.
+6. Burning. 
+7. Soil texture.
+8. Erosion.
+9. Soil moisture contents.
+10. Level of organic matter/microorganisms in the soil.     

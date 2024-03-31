@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultural Science Learning Platform - Lesson Ten</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -44,33 +46,85 @@
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <hr>
+  <h3>Exercises:</h3>
+  <div class="container mt-5">
+    <!-- <h3>CBT App - Nutrient and Nutrient Cycle</h3> -->
+    <div id="questions">
+      <!-- Questions will be dynamically added here -->
+    </div>
+    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <div id="result"></div>
+  </div>
   </form> 
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-//   document.getElementById('playButton').addEventListener('click', function() {
-//     fetch('/text_to_speech', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({ text }),
-//     })
-//     .then(response => {
-//       if (response.ok) {
-//         console.log('Text read aloud successfully.');
-//       } else {
-//         console.error('Error reading text aloud.');
-//       }
-//     })
-//     .catch(error => {
-//       console.error('Error:', error);
-//     });
-//   });
+  $(document).ready(function() {
+    // Sample questions
+    var questions = [
+      {
+        question: "Which among the following is not among the function of Nitrogen to the plant?",
+        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
+        answer: "It regenerate lost leaves"
+      },
+      {
+        question: "Which nutrient is essential for the growth of plants?",
+        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
+        answer: "Nitrogen"
+      },
+      {
+        question: "What is the primary Yellowing of leaves is also known as?",
+        options: ["Chloroplast", "Chlorosis", "Photosynthesis"],
+        answer: "Chlorosis"
+      },
+      {
+        question: "Potassium Deficiency Symptoms include all of the followings except?",
+        options: ["Weak slender stems", "Delayed growth", "Premature loss of leaves", "It is necessary for chlorophyll formation"],
+        answer: "It is necessary for chlorophyll formation"
+      }
+    ];
+  
+    // Dynamically generate HTML for questions
+    questions.forEach(function(q, index) {
+      var questionHtml = `<div class="question mb-3">
+                            <h4>${index + 1}. ${q.question}</h4>
+                            <div class="options">`;
+      
+      q.options.forEach(function(option) {
+        questionHtml += `<div class="form-check">
+                          <input class="form-check-input" type="radio" name="q${index}" value="${option}">
+                          <label class="form-check-label">${option}</label>
+                        </div>`;
+      });
+  
+      questionHtml += `</div></div>`;
+      $('#questions').append(questionHtml);
+    });
+  
+    // Handle submission of answers
+    $('#submitBtn').click(function() {
+      var correctCount = 0;
+  
+      $('.question').each(function(index) {
+        var selectedOption = $(this).find('input[type=radio]:checked').val();
+        var correctAnswer = questions[index].answer;
+  
+        if (selectedOption === correctAnswer) {
+          $(this).addClass('correct');
+          correctCount++;
+        } else {
+          $(this).addClass('incorrect');
+          $(this).find(`input[value="${correctAnswer}"]`).next('label').addClass('correct-answer');
+        }
+      });
 
-document.getElementById('playButton').addEventListener('click', function(){
-    window .location = '/text-2-speech'
-})
+      var resultHtml = `<p>You got ${correctCount} out of ${questions.length} questions correct.</p>`;
+      $('#result').html(resultHtml);
+    });
+  });
+  // toastr.info('Are you the 6 fingered man?');
 </script>
 
 </body>
