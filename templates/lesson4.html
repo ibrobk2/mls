@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit Multimedia Learning Strategy Platform - Lesson Four</title>
+    <title>Problem-Based Multimedia Learning Strategy Platform - Lesson Four</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Explicit Multimedia Learning Strategy Platform</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Problem-Based Multimedia Learning Strategy Platform</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,18 +29,55 @@
 
 <div class="container mt-5">
   <h2>Lesson Four:Methods of Replenishing lost nutrients (Crop Rotation)</h2>
-  <img src="{{url_for('static', filename='lost.jpeg')}}" alt="nutrientnts">
+  <img src="{{url_for('static', filename='cropRot.gif')}}" alt="nutrientnts">
 
   <form action="/lesson4" method="post">
 
     <p><b>Concept of Crop Rotations:</b>The planting of different types of crops on the same pieces of land in a definite sequence. <br>
 
-Examples of Crop Rotation System 
-	Plot 1	Plot 2	Plot 3	Plot 4
+Examples of Crop Rotation System <br>
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Plot1</th>
+    <th>Plot2</th>
+    <th>Plot3</th>
+    <th>Plot4</th>
+  </tr>
+  <tr>
+    <td>Year1</td>
+    <td>Yam</td>
+    <td>Cowpea</td>
+    <td>Cassava</td>
+    <td>Maize</td>
+  </tr>
+  <tr>
+    <td>Year2</td>
+    <td>Cowpea</td>
+    <td>Cassava</td>
+    <td>Maize</td>
+    <td>Yam</td>
+  </tr>
+  <tr>
+    <td>Year3</td>
+    <td>Cassava</td>
+    <td>Maize</td>
+    <td>Yam</td>
+    <td>Cowpea</td>
+  </tr>
+  <tr>
+    <td>Year4</td>
+    <td>Maize</td>
+    <td>Yam</td>
+    <td>Cowpea</td>
+    <td>Cassava</td>
+  </tr>
+</table>
+	<!-- Plot 1	Plot 2	Plot 3	Plot 4
 Year 1 	Yam 	Cowpea	Cassava 	Maize
 Year 2	Cowpea 	Cassava 	Maize	Yam 
 Year 3	Cassava 	Maize	Yam 	Cowpea
-Year 4	Maize	Yam	Cowpea	Cassava
+Year 4	Maize	Yam	Cowpea	Cassava -->
 
 The land is divided into section, usually between 3 and 6, in each year, different plants are planted. <br>
 <b>Compatibility Check </b><br>      
@@ -54,6 +91,8 @@ The land is divided into section, usually between 3 and 6, in each year, differe
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <a class="btn btn-primary" href="/pb4" >Interactive Exercise</a>
+
     <hr>
   <h3>Exercises:</h3>
   <div class="container mt-5">
@@ -61,7 +100,7 @@ The land is divided into section, usually between 3 and 6, in each year, differe
     <div id="questions">
       <!-- Questions will be dynamically added here -->
     </div>
-    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
     <div id="result"></div>
   </div>
   </form> 
@@ -73,24 +112,24 @@ The land is divided into section, usually between 3 and 6, in each year, differe
     // Sample questions
     var questions = [
       {
-        question: "Which among the following is not among the function of Nitrogen to the plant?",
-        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
-        answer: "It regenerate lost leaves"
+        question: "Which of the following is true about crop rotation?",
+        options: ["It promotes vegetative and short system growth", "The planting of different types of crops on the same pieces of land in a definite sequence.", "It regenerate lost leaves", "It aids plant growth and reproduction"],
+        answer: "The planting of different types of crops on the same pieces of land in a definite sequence."
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "Deep rooted plants (cassava and yam) should follow each other. True or False?",
+        options: ["True", "False"],
+        answer: "False"
       },
       {
-        question: "What is the primary Yellowing of leaves is also known as?",
-        options: ["Chloroplast", "Chlorosis", "Photosynthesis"],
-        answer: "Chlorosis"
+        question: "In crop rotation, Crop with common diseases should not follow each other?",
+        options: ["True", "False"],
+        answer: "True"
       },
       {
-        question: "Potassium Deficiency Symptoms include all of the followings except?",
-        options: ["Weak slender stems", "Delayed growth", "Premature loss of leaves", "It is necessary for chlorophyll formation"],
-        answer: "It is necessary for chlorophyll formation"
+        question: "Inclusion of legume crop in the rotation add nutrient to the soil. True or False?",
+        options: ["True", "False"],
+        answer: "True"
       }
     ];
   

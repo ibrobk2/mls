@@ -28,37 +28,28 @@
 </nav>
 
 <div class="container mt-5">
-  <h2>Lesson Ten: Organic Agriculture </h2>
-  <img src="{{url_for('static', filename='organic.jpeg')}}" alt="nutrientnts">
+  <h2>Lesson Ten: Problem Based Exercise </h2>
 
-  <form action="/lesson10" method="post">
+  <form action="/pb10" method="post">
     
-    <p><b>Meaning of Organic Agriculture:</b> Organic agriculture simply means the use of ruminants and decay of plants and animal by-products to improve agriculture production. Use of inorganic fertilizer does not constitute organic agriculture. <br>    
-        <b>Forms of Organic Agriculture</b> <br> 
-        1.<b>Organic manure:</b> this refers to the decayed plants and animal products which has been carefully prepared to supply nutrient to the plants or crops. It could be green manure, farm yard manure or composed manure. <br>
-        2.Cover cropping <br>
-        3.Mulching:This refers to covering of soil with dead and decaying plants to conserve soil water and prevent evaporation <br>
-        4.Crop rotation <br> 
-        <b>Importance of Organic Agriculture</b> <br> 
-        1.It promotes activities of soil living organism such as earthworm, termites and microbes <br>
-        2.It improves the structure of the soil by building the particles of coarse texture soil together <br>
-        3.It reduces rapid soil temperature fluctuations. <br>
-        4.It helps to conserve moisture and prevents evaporation from the soil <br>
-        </p>
+   
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
-    <button class="btn btn-primary">Play Audio</button>
-    <a class="btn btn-primary" href="/pb10" >Interactive Exercise</a>
-
     <hr>
-  <h3>Exercises:</h3>
+    <!-- <h3>Exercises:</h3> -->
+    <img src="{{url_for('static', filename='pb10.jpeg')}}" alt="nutrientnts">
+    <p>Click On Play Audio to Listen</p>
+    <button class="btn btn-primary">Play Audio</button>
+    
+
   <div class="container mt-5">
     <!-- <h3>CBT App - Nutrient and Nutrient Cycle</h3> -->
-    <div id="questions">
+    <!-- <div id="result"></div> -->
+    <!-- <div id="questions"> -->
       <!-- Questions will be dynamically added here -->
-    </div>
-    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
-    <div id="result"></div>
+    <!-- </div> -->
+    <!-- <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button> -->
+    
   </div>
   </form> 
 </div>
@@ -69,19 +60,9 @@
     // Sample questions
     var questions = [
       {
-        question: "Use of inorganic fertilizer does not constitute organic agriculture. True or False?",
-        options: ["True", "False", "Not Sure"],
-        answer: "True"
-      },
-      {
-        question: "covering of soil with dead and decaying plants to conserve soil water and prevent evaporation is also known as...?",
-        options: ["Cover cropping", "Mulching", "Organic Farming"],
-        answer: "Mulching"
-      },
-      {
-        question: "Which of the followings is not importance of Organic Agriculture?",
-        options: [".It promotes activities of soil living organism such as earthworm, termites and microbes", "It improves the structure of the soil by building the particles of coarse texture soil together", "It reduces rapid soil temperature fluctuations.", "It decreases soil nutrients"],
-        answer: "It decreases soil nutrients"
+        question: "Observe the above image and choose below the correct option that is correct in regard to macro-nutrients.",
+        options: ["Nitrogen (N) Phosphorus, Potassium, Calcium and magnesium.", "zinc, copper, boron, iron, molybdenum", "Not Sure"],
+        answer: "Nitrogen (N) Phosphorus, Potassium, Calcium and magnesium."
       }
      
     ];

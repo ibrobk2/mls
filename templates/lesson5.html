@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit Multimedia Learning Strategy Platform - Lesson Five</title>
+    <title>Problem-Based Multimedia Learning Strategy Platform - Lesson Five</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Explicit Multimedia Learning Strategy Platform</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Problem-Based Multimedia Learning Strategy Platform</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,6 +29,7 @@
 
 <div class="container mt-5">
   <h2>Lesson Five: Methods of Replenishing lost nutrients (Bush Fallowing)</h2>
+  <img src="{{url_for('static', filename='bush.jpeg')}}" alt="nutrientnts">
   <form action="/lesson5" method="post">
     
     <p><b>Concept of Bush Fallow:</b> Bush fallowing is a practice where farmlands are left to fallow after one year or two years of cultivation. The purpose of this is to allow nutrients to revert to the soil. <br>
@@ -42,6 +43,8 @@
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <a class="btn btn-primary" href="/pb5" >Interactive Exercise</a>
+
     <hr>
   <h3>Exercises:</h3>
   <div class="container mt-5">
@@ -49,7 +52,7 @@
     <div id="questions">
       <!-- Questions will be dynamically added here -->
     </div>
-    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
     <div id="result"></div>
   </div>
   </form> 
@@ -61,14 +64,14 @@
     // Sample questions
     var questions = [
       {
-        question: "Which among the following is not among the function of Nitrogen to the plant?",
-        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
-        answer: "It regenerate lost leaves"
+        question: "Which among the following is a practice where farmlands are left to fallow after one year or two years of cultivation?",
+        options: ["Bush Following", "Bush Fallowing", "Bush burning"],
+        answer: "Bush Fallowing"
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "In Bush Fallowing plant diseases may not lost their host and die?",
+        options: ["True", "False"],
+        answer: "False"
       },
       {
         question: "What is the primary Yellowing of leaves is also known as?",
@@ -76,9 +79,9 @@
         answer: "Chlorosis"
       },
       {
-        question: "Potassium Deficiency Symptoms include all of the followings except?",
-        options: ["Weak slender stems", "Delayed growth", "Premature loss of leaves", "It is necessary for chlorophyll formation"],
-        answer: "It is necessary for chlorophyll formation"
+        question: "Fallow improve soil physical properties such as texture, structure?",
+        options: ["True", "False"],
+        answer: "True"
       }
     ];
   

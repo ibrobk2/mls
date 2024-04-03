@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultural Science Learning Platform - Lesson</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem-Based Multimedia Learning Strategy Platform</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-brand {
+      margin-right: auto;
+    }
+  </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="{{url_for('static', filename='abu.png')}}" alt="Logo" height="30">
+      Agricultural Science Learning Platform
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Agricultural Science Learning Platform</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/modules">Modules</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/modules">Modules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="window.close();">Exit</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="container mt-5">
-  <h2>Lesson Title</h2>
-  <form action="/text_to_speech" method="post">
-    <p name="text">This is the content of the lesson. You can read it here or listen to the audio version.</p>
-    <button id="playButton" class="btn btn-primary">Play Audio</button>
-  </form> 
-</div>
+  <!-- Your content here -->
 
-<script>
-  document.getElementById('playButton').addEventListener('click', function() {
-    fetch('/text_to_speech', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ text: 'This is the content of the lesson. You can read it here or listen to the audio version.' }),
-    })
-    .then(response => {
-      if (response.ok) {
-        console.log('Text read aloud successfully.');
-      } else {
-        console.error('Error reading text aloud.');
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Exit Code start -->
+  <script>
+    document.querySelector('#exit').addEventListener('click', function() {
+      if (confirm('Are you sure you want to exit?')) {
+        window.close();
       }
-    })
-    .catch(error => {
-      console.error('Error:', error);
     });
-  });
-</script>
-
+  </script>
+  <!-- ends of Exit code  -->
 </body>
 </html>

@@ -4,21 +4,21 @@ Concept of Nutrient Cycle: The cyclical process by which certain nutrients like 
 Nitrogen Cycle
 Nitrogen cycle is a process by which nitrogen is naturally added to and removed from the soil. Nitrogen cycle is nature’s ways of regulating the amount of nitrogen. Nitrogen fixation process involve soil organisms which add a reasonable amount of nitrogen to the soil       
 Ways by which Nitrogen is added to the soil in the nitrogen cycle.     
-1.	Direct fixation by lightening during rainfall (Electrical Discharge)   
-2.	Incorporation by free living bacterial or non-symbiotic bacteria
-3.	Nitrogen fixing bacteria in the root nodules 
-4.	Decomposition of organic matters
-5.	Application of nitrogen fertilizer
-6.	Ammonification
-7.	Nitrification
+1. Direct fixation by lightening during rainfall (Electrical Discharge)   
+2. Incorporation by free living bacterial or non-symbiotic bacteria
+3. Nitrogen fixing bacteria in the root nodules 
+4. Decomposition of organic matters
+5. Application of nitrogen fertilizer
+6. Ammonification
+7. Nitrification
 
 Ways by which soil Nitrogen is lost from the soil 
-1.	By denitrification 
-2.	Soil erosion
-3.	Leaching 
-4.	Soil pH
-5.	Bush Burning 
-6.	Crop removal 
-7.	Volatilization 
-8.	Oxidation reaction 
-9.	Reduction reaction
+1. By denitrification 
+2. Soil erosion
+3. Leaching 
+4. Soil pH
+5. Bush Burning 
+6. Crop removal 
+7. Volatilization 
+8. Oxidation reaction 
+9. Reduction reaction

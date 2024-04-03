@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit Multimedia Learning Strategy Platform - Lesson Nine</title>
+    <title>Problem-Based Multimedia Learning Strategy Platform - Lesson Nine</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Explicit Multimedia Learning Strategy Platform</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Problem-Based Multimedia Learning Strategy Platform</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,6 +22,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/modules">Modules</a>
+
       </li>
     </ul>
   </div>
@@ -29,6 +30,8 @@
 
 <div class="container mt-5">
   <h2>Lesson Nine: Nutrient Cycle (Water)</h2>
+  <img src="{{url_for('static', filename='waterc_anim.gif')}}" alt="nutrientnts">
+
   <form action="/lesson9" method="post">
     
     <p><b>Concept of Water Cycle:</b> The continuous movement of water from the atmosphere to the earth and from the earth to the atmosphere. <br>
@@ -62,6 +65,8 @@
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <a class="btn btn-primary" href="/pb9" >Interactive Exercise</a>
+
     <hr>
   <h3>Exercises:</h3>
   <div class="container mt-5">
@@ -69,7 +74,7 @@
     <div id="questions">
       <!-- Questions will be dynamically added here -->
     </div>
-    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
     <div id="result"></div>
   </div>
   </form> 
@@ -81,24 +86,24 @@
     // Sample questions
     var questions = [
       {
-        question: "Which among the following is not among the function of Nitrogen to the plant?",
-        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
-        answer: "It regenerate lost leaves"
+        question: "All of the followings are ways by which atmosphere receives water except?",
+        options: ["Evaporation from oceans and land", "Transpiration from plants", "Breathy or respiration from animal and plant", "Reproduction by animals"],
+        answer: "Reproduction by animals"
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "All of the followings are ways by which the land receives water?",
+        options: ["Rainfall or precipitation", "Infiltration and percolation", "All of the above"],
+        answer: "All of the above"
       },
       {
-        question: "What is the primary Yellowing of leaves is also known as?",
-        options: ["Chloroplast", "Chlorosis", "Photosynthesis"],
-        answer: "Chlorosis"
+        question: "All of the followings are Forms in which water exit soil except?",
+        options: ["Hydroscopic water", "Capillary water", "Gravitational water", "All of the above"],
+        answer: "All of the above"
       },
       {
-        question: "Potassium Deficiency Symptoms include all of the followings except?",
-        options: ["Weak slender stems", "Delayed growth", "Premature loss of leaves", "It is necessary for chlorophyll formation"],
-        answer: "It is necessary for chlorophyll formation"
+        question: "Which of the followings is not Ways of Conserving Water in the Soil?",
+        options: ["Stoppage of surface water run-off", "Mulching", "Cover cropping", "Fertilizer Application"],
+        answer: "Fertilizer Application"
       }
     ];
   

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit Multimedia Learning Strategy Platform - Lesson Six</title>
+    <title>Problem-Based Multimedia Learning Strategy Platform - Lesson Six</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Explicit Multimedia Learning Strategy Platform</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Problem-Based Multimedia Learning Strategy Platform</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,6 +29,8 @@
 
 <div class="container mt-5">
   <h2>Lesson Six: Methods of Replenishing lost nutrients (cover crop)</h2>
+  <img src="{{url_for('static', filename='cover.jpeg')}}" alt="nutrientnts">
+
   <form action="/lesson6" method="post">
     
     <p>Concept of cover cropping: Cover cropping is a process of planting certain plants mainly to cover soil surface. By so doing, the nutrients are conserved in the soil.<br>
@@ -52,6 +54,8 @@
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <a class="btn btn-primary" href="/pb6" >Interactive Exercise</a>
+
     <hr>
   <h3>Exercises:</h3>
   <div class="container mt-5">
@@ -59,7 +63,7 @@
     <div id="questions">
       <!-- Questions will be dynamically added here -->
     </div>
-    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
     <div id="result"></div>
   </div>
   </form> 
@@ -71,24 +75,24 @@
     // Sample questions
     var questions = [
       {
-        question: "Which among the following is not among the function of Nitrogen to the plant?",
-        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
-        answer: "It regenerate lost leaves"
+        question: "Which among the following is not among Commonly use cover crop?",
+        options: ["Macuna utilis", "Pueraria phaseoloides", "Centrosema", "Pubescens", "Carrot"],
+        answer: "Carrot"
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "Cover crops are all leguminous crop. True or False?",
+        options: ["True", "False"],
+        answer: "True"
       },
       {
-        question: "What is the primary Yellowing of leaves is also known as?",
-        options: ["Chloroplast", "Chlorosis", "Photosynthesis"],
-        answer: "Chlorosis"
+        question: "Which of the following is not Advantage of Cover crops?",
+        options: ["It reduces erosive capacity of moving water, thus checking erosion", "It influences soil water supply", "Cover crop suppress weeds", "It helps in drying the leaves"],
+        answer: "It helps in drying the leaves"
       },
       {
-        question: "Potassium Deficiency Symptoms include all of the followings except?",
-        options: ["Weak slender stems", "Delayed growth", "Premature loss of leaves", "It is necessary for chlorophyll formation"],
-        answer: "It is necessary for chlorophyll formation"
+        question: "One of the functions of cover crops is that...?",
+        options: ["Weak slender stems", "Delayed growth", "It protects the surface of the soil from direct heat of the sun", "It is necessary for chlorophyll formation"],
+        answer: "It protects the surface of the soil from direct heat of the sun"
       }
     ];
   

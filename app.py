@@ -58,8 +58,21 @@ def t2s(lesson):
     # Convert text to speech
     engine.say(text)
     engine.runAndWait()
+    
+    if engine._inLoop:
+        engine.endLoop()
 
 
+
+
+@app.route('/lesson', methods=['POST', 'GET'])
+def lesson():
+    if request.method == 'POST':
+      
+        t2s('lesson1.txt')
+        
+        return render_template('/lesson.html')
+    return render_template('/lesson.html')
 
 
 @app.route('/lesson1', methods=['POST', 'GET'])
@@ -154,5 +167,100 @@ def lesson10():
         return render_template('/lesson10.html')
     return render_template('/lesson10.html')
 
+# Problem Based Section
+@app.route('/pb1', methods=['POST', 'GET'])
+def pb1():
+    if request.method == 'POST':
+        t2s('pb1.txt')
+
+        return render_template('/pb1.html')
+    return render_template('/pb1.html')
+
+
+
+@app.route('/pb2', methods=['POST', 'GET'])
+def pb2():
+    if request.method == 'POST':
+        t2s('pb2.txt')
+
+        return render_template('/pb2.html')
+    return render_template('/pb2.html')
+
+
+
+@app.route('/pb3', methods=['POST', 'GET'])
+def pb3():
+    if request.method == 'POST':
+        t2s('pb3.txt')
+
+        return render_template('/pb3.html')
+    return render_template('/pb3.html')
+
+
+
+@app.route('/pb4', methods=['POST', 'GET'])
+def pb4():
+    if request.method == 'POST':
+        t2s('pb4.txt')
+
+        return render_template('/pb4.html')
+    return render_template('/pb4.html')
+
+
+@app.route('/pb5', methods=['POST', 'GET'])
+def pb5():
+    if request.method == 'POST':
+        t2s('pb5.txt')
+
+        return render_template('/pb5.html')
+    return render_template('/pb5.html')
+
+
+@app.route('/pb6', methods=['POST', 'GET'])
+def pb6():
+    if request.method == 'POST':
+        t2s('pb6.txt')
+
+        return render_template('/pb6.html')
+    return render_template('/pb6.html')
+
+
+
+@app.route('/pb7', methods=['POST', 'GET'])
+def pb7():
+    if request.method == 'POST':
+        t2s('pb7.txt')
+
+        return render_template('/pb7.html')
+    return render_template('/pb7.html')
+
+
+@app.route('/pb8', methods=['POST', 'GET'])
+def pb8():
+    if request.method == 'POST':
+        t2s('pb8.txt')
+
+        return render_template('/pb8.html')
+    return render_template('/pb8.html')
+
+
+@app.route('/pb9', methods=['POST', 'GET'])
+def pb9():
+    if request.method == 'POST':
+        t2s('pb9.txt')
+
+        return render_template('/pb9.html')
+    return render_template('/pb9.html')
+
+
+@app.route('/pb10', methods=['POST', 'GET'])
+def pb10():
+    if request.method == 'POST':
+        t2s('pb10.txt')
+
+        return render_template('/pb10.html')
+    return render_template('/pb10.html')
+# End of PB section
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

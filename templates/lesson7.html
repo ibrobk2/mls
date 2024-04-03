@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit Multimedia Learning Strategy Platform - Lesson Seven</title>
+    <title>Problem-Based Multimedia Learning Strategy Platform - Lesson Seven</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Explicit Multimedia Learning Strategy Platform</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Problem-Based Multimedia Learning Strategy Platform</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -29,13 +29,15 @@
 
 <div class="container mt-5">
   <h2>Lesson Seven: Nutrient Cycle (Nitrogen)</h2>
+  <img src="{{url_for('static', filename='nitrogen.jpg')}}" alt="nutrientnts">
+
   <form action="/lesson7" method="post">
     
     <p><b>Concept of Nutrient Cycle:</b> The cyclical process by which certain nutrients like nitrogen, carbon and water are added to the soil and taken back into the atmosphere.  <br>
         <b>Nitrogen Cycle</b> <br>
         Nitrogen cycle is a process by which nitrogen is naturally added to and removed from the soil. Nitrogen cycle is nature’s ways of regulating the amount of nitrogen. Nitrogen fixation process involve soil organisms which add a reasonable amount of nitrogen to the soil <br>
         <b>Ways by which Nitrogen is added to the soil in the nitrogen cycle.</b> <br>     
-        1.Direct fixation by lightening during rainfall (Electrical Discharge)  <br>  
+        1.Direct fixation by darkening during rainfall (Electrical Discharge)  <br>  
         2.Incorporation by free living bacterial or non-symbiotic bacteria <br>
         3.Nitrogen fixing bacteria in the root nodules  <br>
         4.Decomposition of organic matters <br>
@@ -57,6 +59,8 @@
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <a class="btn btn-primary" href="/pb7" >Interactive Exercise</a>
+
     <hr>
   <h3>Exercises:</h3>
   <div class="container mt-5">
@@ -64,36 +68,44 @@
     <div id="questions">
       <!-- Questions will be dynamically added here -->
     </div>
-    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
     <div id="result"></div>
   </div>
   </form> 
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<!-- Exit Code start -->
+<script>
+  document.querySelector('#exit').addEventListener('click', function() {
+    if (confirm('Are you sure you want to exit?')) {
+      window.close();
+    }
+  });
+</script>
+<!-- ends of Exit code  -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
   $(document).ready(function() {
     // Sample questions
     var questions = [
       {
-        question: "Which among the following is not among the function of Nitrogen to the plant?",
-        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
-        answer: "It regenerate lost leaves"
+        question: "Which among the following defined Nitrogen Cycle?",
+        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "Nitrogen cycle is a process by which nitrogen is naturally added to and removed from the soil", "It aids plant growth and reproduction"],
+        answer: "Nitrogen cycle is a process by which nitrogen is naturally added to and removed from the soil"
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "All of the followings are ways in which Nitrogen is added to the soil except?",
+        options: ["Direct fixation by darkining", "Incorporation by free living bacterial or non-symbiotic bacteria", "Decomposition of organic matters", "Application of nitrogen fertilizer", "Photosynthesis"],
+        answer: "Photosynthesis"
       },
+    
       {
-        question: "What is the primary Yellowing of leaves is also known as?",
-        options: ["Chloroplast", "Chlorosis", "Photosynthesis"],
-        answer: "Chlorosis"
-      },
-      {
-        question: "Potassium Deficiency Symptoms include all of the followings except?",
-        options: ["Weak slender stems", "Delayed growth", "Premature loss of leaves", "It is necessary for chlorophyll formation"],
-        answer: "It is necessary for chlorophyll formation"
+        question: "Ways by which soil Nitrogen is lost from the soil include all of the following except?",
+        options: ["denitrification", "Soil erosion", "Bush Fallowing", "Bush Burning"],
+        answer: "Bush Fallowing"
       }
     ];
   

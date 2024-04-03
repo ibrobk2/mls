@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicit Multimedia Learning Strategy Platform - Lesson Eight</title>
+    <title>Problem-Based Multimedia Learning Strategy Platform - Lesson Eight</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Explicit Multimedia Learning Strategy Platform</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Problem-Based Multimedia Learning Strategy Platform</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,6 +22,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/modules">Modules</a>
+        <a class="btn btn-primary" href="/pb8" >Interactive Exercise</a>
+
       </li>
     </ul>
   </div>
@@ -29,6 +31,8 @@
 
 <div class="container mt-5">
   <h2>Lesson Eight: Nutrient Cycle (Carbon)</h2>
+  <img src="{{url_for('static', filename='ncycle.jpeg')}}" alt="nutrientnts">
+
   <form action="/lesson8" method="post">
     
     <p><b>Concept of Carbon Cycle:</b>This involve the series of processes which contribute to the circulation of carbon in nature. <br>
@@ -50,6 +54,7 @@
     
     <!-- <button id="playButton" class="btn btn-primary">Play Audio</button> -->
     <button class="btn btn-primary">Play Audio</button>
+    <a class="btn btn-primary" href="/pb8" >Interactive Exercise</a>
     <hr>
   <h3>Exercises:</h3>
   <div class="container mt-5">
@@ -57,7 +62,7 @@
     <div id="questions">
       <!-- Questions will be dynamically added here -->
     </div>
-    <button id="submitBtn" class="btn btn-primary">Submit Answers</button>
+    <button id="submitBtn" class="btn btn-primary" type="button">Submit Answers</button>
     <div id="result"></div>
   </div>
   </form> 
@@ -69,19 +74,19 @@
     // Sample questions
     var questions = [
       {
-        question: "Which among the following is not among the function of Nitrogen to the plant?",
-        options: ["It promotes vegetative and short system growth", "It increases the size of grain in cereals", "It regenerate lost leaves", "It aids plant growth and reproduction"],
-        answer: "It regenerate lost leaves"
+        question: "Carbon dioxide is removed from the air mainly by....?",
+        options: ["Respiration", "Chlorosis", "Photosynthesis", "Excretion"],
+        answer: "Photosynthesis"
       },
       {
-        question: "Which nutrient is essential for the growth of plants?",
-        options: ["Nitrogen", "Oxygen", "Carbon dioxide", "Water"],
-        answer: "Nitrogen"
+        question: "Atmosphere gain carbon through all of the followings except?",
+        options: ["Burning fuel like coal and wood", "The action of volcano which carbon dioxide", "Respiration by plants and animals", "The death, decay and putrefaction of plants and animal", "Extraction of minerals"],
+        answer: "Extraction of minerals"
       },
       {
-        question: "What is the primary Yellowing of leaves is also known as?",
-        options: ["Chloroplast", "Chlorosis", "Photosynthesis"],
-        answer: "Chlorosis"
+        question: "Plants use carbon dioxide from the air to manufacture their food during photosynthesis. True or False?",
+        options: ["True", "False", "Not sure"],
+        answer: "True"
       },
       {
         question: "Potassium Deficiency Symptoms include all of the followings except?",

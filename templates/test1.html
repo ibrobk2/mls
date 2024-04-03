@@ -1,0 +1,26 @@
+<!-- test.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-based Multimedia Learning Strategy - Todo One</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Agricultural Science Test</h1>
+    <div class="test-question">
+        <p>What is the process of photosynthesis?</p>
+        <input type="text" class="form-control" id="answer">
+    </div>
+    <button class="btn btn-primary" id="submit-answer">Submit</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
